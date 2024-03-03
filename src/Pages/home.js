@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+import { Image, Link } from "@chakra-ui/react";
 import Home_bg from "../Background/home_bg.jpg";
 import { motion } from "framer-motion";
 import lemon from "../Icons/lemon_cake.png";
@@ -19,7 +19,6 @@ export default function Home() {
         duration: i * 1.2,
       },
     }),
-    hidden: { opacity: 0 },
   };
   const variants_2 = {
     visible: (i) => ({
@@ -30,71 +29,80 @@ export default function Home() {
         duration: Math.abs(i) * 0.5,
       },
     }),
-    hidden: { opacity: 0 },
   };
   return (
     <Box
-      w="100vw"
       h="100vh"
+      overflowX="hidden"
       bgColor="#ffe067"
       bgImg={Home_bg}
       bgRepeat={"no-repeat"}
       bgSize={"100% auto"}
     >
-      <MotionImage
-        custom={3}
-        animate="visible"
-        variants={variants}
-        initial={{ opacity: 0 }}
-        src={lemon}
-        h="20vh"
-        top="3vh"
-        left="2vw"
-        position="absolute"
-      />
-      <MotionImage
-        custom={-4}
-        animate="visible"
-        variants={variants_2}
-        initial={{ opacity: 0 }}
-        src={strawberry}
-        h="30vh"
-        top="-2vh"
-        right="-35vw"
-        position="absolute"
-      />
-      <MotionImage
-        custom={2}
-        animate="visible"
-        variants={variants_2}
-        initial={{ opacity: 0 }}
-        src={puff}
-        h="30vh"
-        bottom="5vh"
-        left="-22vw"
-        position="absolute"
-      />
-      <MotionImage
-        custom={1}
-        animate="visible"
-        variants={variants}
-        initial={{ opacity: 0 }}
-        src={maffin}
-        h="15vh"
-        bottom="25vh"
-        right="13vw"
-        position="absolute"
-      />
-      <MotionImage
-        custom={5}
-        animate="visible"
-        variants={variants}
-        src={trademark}
-        h="17vh"
-        top="40vh"
-        right="45vw"
-        position="absolute"
-      />
+      <Link href="/product/lemon">
+        <MotionImage
+          custom={3}
+          animate="visible"
+          variants={variants}
+          initial={{ opacity: 0 }}
+          src={lemon}
+          h="20vh"
+          top="3vh"
+          left="2vw"
+          position="absolute"
+        />
+      </Link>
+      <Link href="/product/strawberry">
+        <MotionImage
+          custom={-4}
+          animate="visible"
+          variants={variants_2}
+          initial={{ opacity: 0 }}
+          src={strawberry}
+          h="30vh"
+          top="-2vh"
+          right="-35vw"
+          position="absolute"
+        />
+      </Link>
+      <Link href="/product/puff">
+        <MotionImage
+          custom={2}
+          animate="visible"
+          variants={variants_2}
+          initial={{ opacity: 0 }}
+          src={puff}
+          h="30vh"
+          bottom="5vh"
+          left="-22vw"
+          position="absolute"
+        />
+      </Link>
+      <Link href="/product/maffin">
+        <MotionImage
+          custom={1}
+          animate="visible"
+          variants={variants}
+          initial={{ opacity: 0 }}
+          src={maffin}
+          h="15vh"
+          bottom="25vh"
+          right="13vw"
+          position="absolute"
+        />
+      </Link>
+      <Link href="/introduction">
+        <MotionImage
+          custom={5}
+          animate="visible"
+          variants={variants}
+          src={trademark}
+          h="17vh"
+          top="40vh"
+          right="45vw"
+          position="absolute"
+        />
+      </Link>
     </Box>
   );
 }
