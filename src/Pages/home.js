@@ -23,17 +23,16 @@ export default function Home() {
   const variants_2 = {
     visible: (i) => ({
       opacity: 1,
-      x: i * 5 + "%",
+      x: "0%",
       transition: {
-        delay: Math.abs(i) * 0.5, // delay 的時間為 i* 0.2
-        duration: Math.abs(i) * 0.5,
+        delay: i * 0.5, // delay 的時間為 i* 0.2
+        duration: i * 1,
       },
     }),
   };
   return (
     <Box
       h="100vh"
-      overflowX="hidden"
       bgColor="#ffe067"
       bgImg={Home_bg}
       bgRepeat={"no-repeat"}
@@ -54,14 +53,14 @@ export default function Home() {
       </Link>
       <Link href="/product/strawberry">
         <MotionImage
-          custom={-4}
+          custom={3}
           animate="visible"
           variants={variants_2}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, x: "10%" }}
           src={strawberry}
           h="30vh"
           top="-2vh"
-          right="-35vw"
+          right="0"
           position="absolute"
         />
       </Link>
@@ -70,17 +69,17 @@ export default function Home() {
           custom={2}
           animate="visible"
           variants={variants_2}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, x: "-10%" }}
           src={puff}
           h="30vh"
           bottom="5vh"
-          left="-22vw"
+          left="0"
           position="absolute"
         />
       </Link>
       <Link href="/product/maffin">
         <MotionImage
-          custom={1}
+          custom={2}
           animate="visible"
           variants={variants}
           initial={{ opacity: 0 }}
