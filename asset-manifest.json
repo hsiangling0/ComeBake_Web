@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/ComeBake_Web/static/css/main.6487f3c3.css",
-    "main.js": "/ComeBake_Web/static/js/main.62e435ac.js",
+    "main.js": "/ComeBake_Web/static/js/main.433d59dd.js",
     "static/media/GenSenRounded-R.ttc": "/ComeBake_Web/static/media/GenSenRounded-R.4d8dac3fd27444ed2563.ttc",
     "static/media/ChenYuluoyan-Thin-Monospaced.ttf": "/ComeBake_Web/static/media/ChenYuluoyan-Thin-Monospaced.42a358722916f0254964.ttf",
     "static/media/introduction_bg.jpg": "/ComeBake_Web/static/media/introduction_bg.57e362852f1a0259b5cd.jpg",
     "static/media/maffin_bg.jpg": "/ComeBake_Web/static/media/maffin_bg.1aac01eb10da8a51c5e0.jpg",
-    "static/media/home_bg.jpg": "/ComeBake_Web/static/media/home_bg.6c13b8f8cce0ba9f2564.jpg",
     "static/media/strawberry_bg.jpg": "/ComeBake_Web/static/media/strawberry_bg.1dada1f7e1ff309e9353.jpg",
     "static/media/puff_bg.jpg": "/ComeBake_Web/static/media/puff_bg.2cc3c1b652f5307d453c.jpg",
     "static/media/lemon_bg.jpg": "/ComeBake_Web/static/media/lemon_bg.aea6c13e958f7c5a11dc.jpg",
@@ -21,10 +20,10 @@
     "static/media/login.png": "/ComeBake_Web/static/media/login.e23514efd6eb1a9c7c85.png",
     "index.html": "/ComeBake_Web/index.html",
     "main.6487f3c3.css.map": "/ComeBake_Web/static/css/main.6487f3c3.css.map",
-    "main.62e435ac.js.map": "/ComeBake_Web/static/js/main.62e435ac.js.map"
+    "main.433d59dd.js.map": "/ComeBake_Web/static/js/main.433d59dd.js.map"
   },
   "entrypoints": [
     "static/css/main.6487f3c3.css",
-    "static/js/main.62e435ac.js"
+    "static/js/main.433d59dd.js"
   ]
 }
