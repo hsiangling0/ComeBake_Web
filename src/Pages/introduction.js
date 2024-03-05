@@ -16,7 +16,7 @@ export default function Introduction() {
     >
       <Tabs page="0" />
       <Box h="calc(100vw*4/5)">
-        <Link href="/">
+        <Link href="/ComeBake_Web/">
           <Image
             src={booking}
             w="23vw"

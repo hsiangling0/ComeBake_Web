@@ -37,7 +37,7 @@ export default function Product() {
       ) : (
         <Image position="absolute" bottom="0" src={url[kind]} />
       )}
-      <Link href={"/#/booking/" + kind}>
+      <Link href={"/ComeBake_Web/#/booking/" + kind}>
         <MotionImage
           animate="visible"
           variants={variants}
