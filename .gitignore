@@ -1,0 +1,10 @@
+/node_modules
+/dist
+/.pnp
+.pnp.js
+/build
+.DS_Store
+.env
+yarn-debug.log
+yarn-error.log
+

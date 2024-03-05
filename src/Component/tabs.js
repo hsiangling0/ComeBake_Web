@@ -16,7 +16,6 @@ export default function Tabs(props) {
       "color: #ce3c29; text-decoration: none; cursor: auto"
     );
     current[page].removeAttribute("href");
-    console.log(current[page]);
   }, []);
   return (
     <Flex
@@ -31,7 +30,7 @@ export default function Tabs(props) {
     >
       <Breadcrumb separator="" spacing="13px">
         <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/introduciton">
+          <BreadcrumbLink className="tab" href="/introduction">
             關於我們
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -41,7 +40,7 @@ export default function Tabs(props) {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/">
+          <BreadcrumbLink className="tab" href="/booking/finding">
             甜點課程
           </BreadcrumbLink>
         </BreadcrumbItem>

@@ -14,8 +14,6 @@ export default function Introduction() {
       backgroundSize="100%"
       position="relative"
     >
-      {/* <Box bgImg={introduction_bg} backgroundRepeat="no-repeat" minH="calc(100vw*9/8)" backgroundSize="100%"></Box> */}
-      {/* <Image src={introduction_bg} /> */}
       <Tabs page="0" />
       <Box h="calc(100vw*4/5)">
         <Link href="/">
