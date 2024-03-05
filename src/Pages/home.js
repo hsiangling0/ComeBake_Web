@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/layout";
 import { Image, Link } from "@chakra-ui/react";
-//import Home_bg from "https://res.cloudinary.com/dmtkjeuo7/image/upload/v1709649052/Come_Bake/home_bg_nqu6vz.jpg";
+import Home_bg from "../Background/home_bg.jpg";
 import { motion } from "framer-motion";
 import lemon from "../Icons/lemon_cake.png";
 import strawberry from "../Icons/strawberry_cake.png";
@@ -34,7 +34,7 @@ export default function Home() {
     <Box
       h="100vh"
       bgColor="#ffe067"
-      bgImg="url(https://res.cloudinary.com/dmtkjeuo7/image/upload/v1709649052/Come_Bake/home_bg_nqu6vz.jpg)"
+      bgImg={Home_bg}
       bgRepeat={"no-repeat"}
       bgSize={"100% auto"}
     >
