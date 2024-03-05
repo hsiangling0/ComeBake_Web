@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ComeBake_Web/static/css/main.6487f3c3.css",
-    "main.js": "/ComeBake_Web/static/js/main.8ebd5f84.js",
+    "main.js": "/ComeBake_Web/static/js/main.93630ff3.js",
     "static/media/GenSenRounded-R.ttc": "/ComeBake_Web/static/media/GenSenRounded-R.4d8dac3fd27444ed2563.ttc",
     "static/media/ChenYuluoyan-Thin-Monospaced.ttf": "/ComeBake_Web/static/media/ChenYuluoyan-Thin-Monospaced.42a358722916f0254964.ttf",
     "static/media/booking_home.png": "/ComeBake_Web/static/media/booking_home.17f89e05d814e7504a0a.png",
     "static/media/lemon_cake.png": "/ComeBake_Web/static/media/lemon_cake.4b7ade6d329111a92dab.png",
     "static/media/puff.png": "/ComeBake_Web/static/media/puff.916e25e7af527ea268a1.png",
-    "static/media/introduction_bg.jpg": "/ComeBake_Web/static/media/introduction_bg.807d7108db19ac3e6a90.jpg",
+    "static/media/introduction_bg.jpg": "/ComeBake_Web/static/media/introduction_bg.352d92afac40cfdabe26.jpg",
     "static/media/maffin.png": "/ComeBake_Web/static/media/maffin.6340b2dcc6c986a6a405.png",
     "static/media/strawberry_cake.png": "/ComeBake_Web/static/media/strawberry_cake.998c7b40cad8727a5142.png",
     "static/media/strawberry_bg.jpg": "/ComeBake_Web/static/media/strawberry_bg.6b60b2acf421796fd1c5.jpg",
@@ -20,10 +20,10 @@
     "static/media/booking_b.png": "/ComeBake_Web/static/media/booking_b.b577f8ed04d78e431b8b.png",
     "index.html": "/ComeBake_Web/index.html",
     "main.6487f3c3.css.map": "/ComeBake_Web/static/css/main.6487f3c3.css.map",
-    "main.8ebd5f84.js.map": "/ComeBake_Web/static/js/main.8ebd5f84.js.map"
+    "main.93630ff3.js.map": "/ComeBake_Web/static/js/main.93630ff3.js.map"
   },
   "entrypoints": [
     "static/css/main.6487f3c3.css",
-    "static/js/main.8ebd5f84.js"
+    "static/js/main.93630ff3.js"
   ]
 }
