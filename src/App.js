@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import Home from "./Pages/home";
 import Product from "./Pages/product";
@@ -7,14 +7,14 @@ import Booking from "./Pages/booking";
 function App() {
   return (
     <ChakraProvider>
-      <Router>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/product/:kind" element={<Product />} />
           <Route path="/introduction" element={<Introduction />} />
           <Route path="/booking/:kind" element={<Booking />} />
         </Routes>
-      </Router>
+      </HashRouter>
     </ChakraProvider>
   );
 }
