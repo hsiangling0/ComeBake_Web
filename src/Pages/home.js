@@ -38,7 +38,7 @@ export default function Home() {
       bgRepeat={"no-repeat"}
       bgSize={"100% auto"}
     >
-      <Link href="/ComeBake_Web/#/product/lemon">
+      <Link href="/#/product/lemon">
         <MotionImage
           custom={3}
           animate="visible"
@@ -51,7 +51,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/ComeBake_Web/#/product/strawberry">
+      <Link href="/#/product/strawberry">
         <MotionImage
           custom={3}
           animate="visible"
@@ -64,7 +64,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/ComeBake_Web/#/product/puff">
+      <Link href="/#/product/puff">
         <MotionImage
           custom={2}
           animate="visible"
@@ -77,7 +77,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/ComeBake_Web/#/product/maffin">
+      <Link href="/#/product/maffin">
         <MotionImage
           custom={2}
           animate="visible"
@@ -90,7 +90,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/ComeBake_Web/#/introduction">
+      <Link href="/#/introduction">
         <MotionImage
           custom={5}
           animate="visible"
