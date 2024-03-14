@@ -1,7 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Box, Flex, Text } from "@chakra-ui/layout";
-import { Select } from "@chakra-ui/react";
+import {
+  Select,
+  Image,
+  useDisclosure,
+  Alert,
+  AlertIcon,
+  CloseButton,
+} from "@chakra-ui/react";
 import { useFormik } from "formik";
 import {
   FormControl,
@@ -10,17 +17,19 @@ import {
   Input,
 } from "@chakra-ui/react";
 import booking_bg from "../Background/booking_bg.jpg";
+import register_button from "../Icons/register_button.png";
 import Tabs from "../Component/tabs";
 import styled from "@emotion/styled";
 export default function Booking() {
   const { kind } = useParams();
-  const [course, setCourse] = useState("還沒決定，想現場再看看");
+  const [course, setCourse] = useState("還沒決定，想現場再看看！");
+  const { isOpen, onClose, onOpen } = useDisclosure({ defaultIsOpen: false });
   const [courseOption, setCoureOption] = useState([
-    "檸檬塔",
-    "草莓蛋糕",
-    "草莓杯子蛋糕",
-    "泡芙",
-    "還沒決定，想現場再看看",
+    "檸檬塔課程",
+    "草莓蛋糕課程",
+    "草莓杯子蛋糕課程",
+    "小泡芙課程",
+    "還沒決定，想現場再看看！",
   ]);
   const validate = (values) => {
     const errors = {};
@@ -28,6 +37,11 @@ export default function Booking() {
       errors.email = "請輸入電子郵件地址";
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
       errors.email = "信箱格式錯誤";
+    }
+    if (!values.phone) {
+      errors.phone = "請輸入聯絡電話";
+    } else if (!/^09[0-9]{2}-[0-9]{3}-[0-9]{3}$/i.test(values.phone)) {
+      errors.phone = "電話格式錯誤";
     }
     return errors;
   };
@@ -38,12 +52,13 @@ export default function Booking() {
       email: "",
       people: 1,
       date: "",
-      time: "",
-      course: "",
+      time: "11:00-13:00",
+      course: kind,
     },
     validate,
     onSubmit: (values) => {
       console.log(values);
+      onOpen();
     },
   });
   useEffect(() => {
@@ -67,124 +82,124 @@ export default function Booking() {
         break;
     }
     setCourse(test);
+    temp.unshift(test);
     setCoureOption(temp);
   }, []);
   return (
     <Box bgImg={booking_bg} bgColor="#fff9e1" h="100vh" bgSize={"100% auto"}>
       <Tabs page="2" />
       <Box
-        w="50vw"
+        w="100vw"
         position="absolute"
         top="30vh"
         left="8vw"
         fontFamily="GenSenRounded"
       >
         <form onSubmit={formik.handleSubmit}>
-          <Flex mb="3vh">
-            <FormControl isRequired>
-              <Flex>
-                <CustomLabel>姓名:</CustomLabel>
-                <Input
-                  w="210px"
-                  name="name"
-                  placeholder="報名人姓名"
-                  onChange={formik.handleChange}
-                  value={formik.values.name}
-                />
-              </Flex>
-            </FormControl>
-            <FormControl isRequired>
-              <Flex>
-                <CustomLabel>聯絡電話:</CustomLabel>
-                <Input
-                  w="210px"
-                  name="phone"
-                  placeholder="報名人聯絡電話"
-                  onChange={formik.handleChange}
-                  value={formik.values.phone}
-                />
-              </Flex>
-            </FormControl>
-          </Flex>
-
-          <FormControl isRequired isInvalid={formik.errors.email} mb="3vh">
-            <Flex>
-              <CustomLabel>Email:</CustomLabel>
-              <Input
-                w="41vw"
-                name="email"
-                type="email"
-                placeholder="報名人電子郵件"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-              />
-            </Flex>
-            <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
-          </FormControl>
-          <FormControl isRequired>
+          <Box w="50vw">
             <Flex mb="3vh">
-              <CustomLabel>入場／陪同人數:</CustomLabel>
-              <Select
-                name="people"
-                placeholder="1"
-                w="230px"
-                onChange={formik.handleChange}
-              >
-                <option value={formik.values.people}>2</option>
-                <option value={formik.values.people}>3</option>
-                <option value={formik.values.people}>4</option>
-              </Select>
+              <FormControl isRequired>
+                <Flex>
+                  <CustomLabel>姓名:</CustomLabel>
+                  <Input
+                    w="210px"
+                    name="name"
+                    placeholder="報名人姓名"
+                    onChange={formik.handleChange}
+                    value={formik.values.name}
+                  />
+                </Flex>
+              </FormControl>
+              <FormControl isRequired isInvalid={formik.errors.phone}>
+                <Flex>
+                  <CustomLabel>聯絡電話:</CustomLabel>
+                  <Input
+                    w="210px"
+                    name="phone"
+                    placeholder="09xx-xxx-xxx"
+                    onChange={formik.handleChange}
+                    value={formik.values.phone}
+                  />
+                </Flex>
+                <FormErrorMessage>{formik.errors.phone}</FormErrorMessage>
+              </FormControl>
             </Flex>
-          </FormControl>
-          <Flex mb="3vh">
-            <FormControl isRequired>
+
+            <FormControl isRequired isInvalid={formik.errors.email} mb="3vh">
               <Flex>
-                <CustomLabel>日期:</CustomLabel>
+                <CustomLabel>Email:</CustomLabel>
                 <Input
-                  w="230px"
-                  name="date"
-                  type="date"
+                  w="41vw"
+                  name="email"
+                  type="email"
+                  placeholder="報名人電子郵件"
                   onChange={formik.handleChange}
-                  value={formik.values.date}
+                  value={formik.values.email}
                 />
               </Flex>
+              <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
             </FormControl>
             <FormControl isRequired>
-              <Flex>
-                <CustomLabel>時段:</CustomLabel>
-                <Select
-                  name="time"
-                  placeholder="11:00-13:00"
-                  w="230px"
-                  onChange={formik.handleChange}
-                >
-                  <option value={formik.values.time}>15:00-17:00</option>
-                  <option value={formik.values.time}>19:00-21:00</option>
+              <Flex mb="3vh">
+                <CustomLabel>入場／陪同人數:</CustomLabel>
+                <Select name="people" w="230px" onChange={formik.handleChange}>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
                 </Select>
               </Flex>
             </FormControl>
-          </Flex>
-
-          <FormControl isRequired>
-            <Flex mb="4vh">
-              <CustomLabel>選擇體驗課程:</CustomLabel>
-              <Select
-                name="course"
-                placeholder={course}
-                w="35vw"
-                onChange={formik.handleChange}
-              >
-                {courseOption &&
-                  courseOption.map((e, index) => (
-                    <option key={index} value={formik.values.course}>
-                      {e}
-                    </option>
-                  ))}
-              </Select>
+            <Flex mb="3vh">
+              <FormControl isRequired>
+                <Flex>
+                  <CustomLabel>日期:</CustomLabel>
+                  <Input
+                    w="230px"
+                    name="date"
+                    type="date"
+                    onChange={formik.handleChange}
+                    value={formik.values.date}
+                  />
+                </Flex>
+              </FormControl>
+              <FormControl isRequired>
+                <Flex>
+                  <CustomLabel>時段:</CustomLabel>
+                  <Select name="time" w="230px" onChange={formik.handleChange}>
+                    <option value="11:00-13:00">11:00-13:00</option>
+                    <option value="15:00-17:00">15:00-17:00</option>
+                    <option value="19:00-21:00">19:00-21:00</option>
+                  </Select>
+                </Flex>
+              </FormControl>
             </Flex>
-          </FormControl>
+
+            <FormControl isRequired>
+              <Flex mb="4vh">
+                <CustomLabel>選擇體驗課程:</CustomLabel>
+                <Select name="course" w="35vw" onChange={formik.handleChange}>
+                  {courseOption &&
+                    courseOption.map((e, index) => (
+                      <option key={index} value={e}>
+                        {e}
+                      </option>
+                    ))}
+                </Select>
+              </Flex>
+            </FormControl>
+          </Box>
+          <button type="submit">
+            <Image
+              position="absolute"
+              bottom="0.5vh"
+              right="30vw"
+              h="80px"
+              src={register_button}
+            />
+          </button>
         </form>
-        <Box>
+        <Box w="50vw">
           <Text color="#eaab99">
             在預約我們的烘焙課程前，請注意以下事項，以確保您的預約和參加過程順利愉快：
             <br />
@@ -200,6 +215,21 @@ export default function Booking() {
           </Text>
         </Box>
       </Box>
+      {isOpen && (
+        <Alert
+          status="success"
+          position="absolute"
+          top="15px"
+          left="calc(50% - 92px)"
+          w="180px"
+          h="56px"
+          borderRadius="4px"
+        >
+          <AlertIcon />
+          預約成功！
+          <CloseButton w="8px" h="8px" ml="16px" onClick={onClose} />
+        </Alert>
+      )}
     </Box>
   );
 }
