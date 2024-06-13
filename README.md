@@ -1,6 +1,6 @@
 # Come_Bake Web
 
-Open [Come Bake](https://comebake-web-grccxmtmma-de.a.run.app) to book the dessert courses!
+Open [Come Bake](http://luffy.ee.ncku.edu.tw:3002) to book the dessert courses!
 
 ![home](./readme_img/home_page.png)
 The initial browsing experience on this GitPage might be less than optimal as image downloads could take some time. Please activate caching and refresh the page once, and you'll be treated to delightful desserts and engaging animations. I am in the process of deploying it on Google Cloud Run to enhance the overall user experience.
