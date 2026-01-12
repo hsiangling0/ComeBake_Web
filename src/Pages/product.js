@@ -1,6 +1,5 @@
-import { Box } from "@chakra-ui/layout";
 import { useParams } from "react-router-dom";
-import { Image, Link } from "@chakra-ui/react";
+import { Image, Link, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { dessert } from "../Component/product_detail";
 import lemom_bg from "../Background/lemon_bg.jpg";
