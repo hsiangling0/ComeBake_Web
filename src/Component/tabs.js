@@ -30,28 +30,18 @@ export default function Tabs(props) {
     >
       <Breadcrumb separator="" spacing="13px">
         <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/#/introduction">
-            關於我們
+          <BreadcrumbLink className="tab" href="/">
+            Home Page
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/">
-            最新消息
+          <BreadcrumbLink className="tab" href="/#/introduction">
+            About Us
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
           <BreadcrumbLink className="tab" href="/#/booking/finding">
-            甜點課程
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/">
-            烘焙環境
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/">
-            聯絡我們
+            Booking
           </BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>

@@ -1,5 +1,4 @@
-import { Box } from "@chakra-ui/layout";
-import { Image, Link } from "@chakra-ui/react";
+import { Image, Link, Box } from "@chakra-ui/react";
 import Home_bg from "../Background/home_bg.jpg";
 import { motion } from "framer-motion";
 import lemon from "../Icons/lemon_cake.png";

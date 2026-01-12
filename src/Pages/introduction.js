@@ -1,5 +1,4 @@
-import { Box } from "@chakra-ui/layout";
-import { Image, Link, Stack, Text, Flex } from "@chakra-ui/react";
+import { Image, Link, Stack, Text, Flex, Box } from "@chakra-ui/react";
 import introduction_bg from "../Background/introduction_bg.jpg";
 import Tabs from "../Component/tabs";
 import booking from "../Icons/booking_home.png";
@@ -25,7 +24,7 @@ export default function Introduction() {
       backgroundSize="100%"
       position="relative"
     >
-      <Tabs page="0" />
+      <Tabs page="1" />
       <Box h="calc(100vw*4/5)">
         <Link href="/">
           <Image
