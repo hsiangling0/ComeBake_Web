@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ComeBake_Web/static/css/main.6487f3c3.css",
-    "main.js": "/ComeBake_Web/static/js/main.6997cbc9.js",
+    "main.js": "/ComeBake_Web/static/js/main.3aa40bfd.js",
     "static/media/GenSenRounded-R.ttc": "/ComeBake_Web/static/media/GenSenRounded-R.4d8dac3fd27444ed2563.ttc",
     "static/media/ChenYuluoyan-Thin-Monospaced.ttf": "/ComeBake_Web/static/media/ChenYuluoyan-Thin-Monospaced.42a358722916f0254964.ttf",
     "static/media/booking_home.png": "/ComeBake_Web/static/media/booking_home.17f89e05d814e7504a0a.png",
@@ -21,10 +21,10 @@
     "static/media/register_button.png": "/ComeBake_Web/static/media/register_button.dd8de46328e01b8631f2.png",
     "index.html": "/ComeBake_Web/index.html",
     "main.6487f3c3.css.map": "/ComeBake_Web/static/css/main.6487f3c3.css.map",
-    "main.6997cbc9.js.map": "/ComeBake_Web/static/js/main.6997cbc9.js.map"
+    "main.3aa40bfd.js.map": "/ComeBake_Web/static/js/main.3aa40bfd.js.map"
   },
   "entrypoints": [
     "static/css/main.6487f3c3.css",
-    "static/js/main.6997cbc9.js"
+    "static/js/main.3aa40bfd.js"
   ]
 }
