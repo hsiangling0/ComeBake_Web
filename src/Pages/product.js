@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { Image, Link, Box } from "@chakra-ui/react";
+import { Image, Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { dessert } from "../Component/product_detail";
 import lemom_bg from "../Background/lemon_bg.jpg";
@@ -36,7 +37,7 @@ export default function Product() {
       ) : (
         <Image position="absolute" bottom="0" src={url[kind]} />
       )}
-      <Link href={"/#/booking/" + kind}>
+      <Link to={"/booking/" + kind}>
         <MotionImage
           animate="visible"
           variants={variants}
