@@ -1,5 +1,6 @@
-import { Image, Link, Stack, Text, Flex, Box } from "@chakra-ui/react";
+import { Image, Stack, Text, Flex, Box } from "@chakra-ui/react";
 import introduction_bg from "../Background/introduction_bg.jpg";
+import { Link } from "react-router-dom";
 import Tabs from "../Component/tabs";
 import booking from "../Icons/booking_home.png";
 import { script } from "../Component/intro_script";
@@ -26,7 +27,7 @@ export default function Introduction() {
     >
       <Tabs page="1" />
       <Box h="calc(100vw*4/5)">
-        <Link href="/">
+        <Link to="/booking/finding">
           <Image
             src={booking}
             w="23vw"

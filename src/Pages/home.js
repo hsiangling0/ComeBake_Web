@@ -1,4 +1,5 @@
-import { Image, Link, Box } from "@chakra-ui/react";
+import { Image, Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import Home_bg from "../Background/home_bg.jpg";
 import { motion } from "framer-motion";
 import lemon from "../Icons/lemon_cake.png";
@@ -37,7 +38,7 @@ export default function Home() {
       bgRepeat={"no-repeat"}
       bgSize={"100% auto"}
     >
-      <Link href="/#/product/lemon">
+      <Link to="/product/lemon">
         <MotionImage
           custom={3}
           animate="visible"
@@ -50,7 +51,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/#/product/strawberry">
+      <Link to="/product/strawberry">
         <MotionImage
           custom={3}
           animate="visible"
@@ -63,7 +64,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/#/product/puff">
+      <Link to="/product/puff">
         <MotionImage
           custom={2}
           animate="visible"
@@ -76,7 +77,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/#/product/maffin">
+      <Link to="/product/maffin">
         <MotionImage
           custom={2}
           animate="visible"
@@ -89,7 +90,7 @@ export default function Home() {
           position="absolute"
         />
       </Link>
-      <Link href="/#/introduction">
+      <Link to="/introduction">
         <MotionImage
           custom={5}
           animate="visible"

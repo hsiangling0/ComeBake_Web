@@ -7,6 +7,7 @@ import {
   BreadcrumbLink,
   Flex,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 export default function Tabs(props) {
   useEffect(() => {
     const current = document.querySelectorAll(".tab");
@@ -30,17 +31,17 @@ export default function Tabs(props) {
     >
       <Breadcrumb separator="" spacing="13px">
         <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/">
+          <BreadcrumbLink className="tab" as={Link} to="/">
             Home Page
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/#/introduction">
+          <BreadcrumbLink className="tab" as={Link} to="/introduction">
             About Us
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink className="tab" href="/#/booking/finding">
+          <BreadcrumbLink className="tab" as={Link} to="/booking/finding">
             Booking
           </BreadcrumbLink>
         </BreadcrumbItem>
